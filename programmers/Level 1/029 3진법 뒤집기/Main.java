@@ -51,6 +51,19 @@ class Solution {
 
         return d + end;
     }
+
+    public int solution2(int n) {
+        String a = "";
+
+        while(n > 0){
+            a = (n % 3) + a;
+            n /= 3;
+        }
+        a = new StringBuilder(a).reverse().toString();
+        System.out.println(a);
+
+        return Integer.parseInt(a,3); // parseInt는 String을 특정 진수로 변환. radix로 n진수로 변환할지 정함.
+    }
 }
 
 public class Main {
