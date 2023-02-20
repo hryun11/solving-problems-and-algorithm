@@ -28,13 +28,14 @@ class Solution {
             if (value.equals(" ")) {
                 sb.append(value);
                 cnt = 0;
-            }
-            if (cnt % 2 == 1) {
-                sb.append(value.toUpperCase());
-                cnt += 1;
-            } else if (cnt % 2 == 0) {
-                sb.append(value);
-                cnt += 1;
+            } else {
+                if (cnt % 2 == 1) {
+                    sb.append(value.toUpperCase());
+                    cnt += 1;
+                } else if (cnt % 2 == 0) {
+                    sb.append(value);
+                    cnt += 1;
+                }
             }
         }
         return sb.toString();
